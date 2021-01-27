@@ -676,7 +676,13 @@ label:last-of-type {
 }
 @media screen and (max-width: 664px) {
   form {
-    max-width: 25rem;
+    max-width: 20rem;
+  }
+  input:not([type="checkbox"]),
+  select,
+  textarea,
+  .confirm-news {
+    width: 50%;
   }
 }
 .submit-btn {
@@ -698,7 +704,8 @@ footer {
 }
 .links-center {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 .text-links a {
   margin-right: 1rem;
@@ -717,4 +724,22 @@ footer {
 .text-links a:hover,
 .icon-links ion-icon:hover {
   color: var(--clr-white);
+}
+.copyright {
+  text-align: center;
+  color: var(--clr-grey-4);
+  margin-top: 1rem;
+}
+@media screen and (max-width: 600px) {
+  .links-center > * {
+    flex: 0 0 100%;
+    margin-bottom: 1rem;
+  }
+  .links-center {
+    text-align: center;
+  }
+  .copyright {
+    max-width: 20rem;
+    margin: 1rem auto;
+  }
 }
