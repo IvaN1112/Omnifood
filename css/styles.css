@@ -81,6 +81,19 @@ ion-icon {
   color: var(--clr-primary-5);
 }
 
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+}
+input:not([type="checkbox"]),
+select,
+textarea,
+.confirm-news {
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
 /*****************
 ***** Global classes*****
  *****************/
@@ -206,6 +219,42 @@ nav ul {
 .nav-link:hover {
   border-bottom: 2px solid var(--clr-primary-5);
 }
+.nav-icon-open {
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  nav {
+    position: relative;
+  }
+  .nav-links {
+    position: absolute;
+    top: 5rem;
+    left: 0;
+    height: 0;
+    display: block;
+    overflow: hidden;
+    transition: var(--transition);
+  }
+  .show-nav {
+    height: 130.667px;
+  }
+  .nav-links li {
+    margin-bottom: 1rem;
+  }
+  .nav-links a {
+    padding-bottom: 0.2rem;
+  }
+  .nav-icon-open {
+    display: block;
+    font-size: 3rem;
+  }
+  .nav-icon-open ion-icon {
+    transition: 1s all;
+  }
+  .nav-icon-open ion-icon:hover {
+    color: var(--clr-primary-8);
+  }
+}
 
 /*****************
 ***** Features*****
@@ -289,10 +338,9 @@ nav ul {
 .how-it-works-center {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-end;
 }
 .how-it-works-center > * {
-  flex: 0 0 50%;
+  flex: 0 0 calc(50% - 2rem);
 }
 .how-it-works-info {
   margin: auto 0;
@@ -304,8 +352,9 @@ nav ul {
   margin-left: auto;
 }
 .how-container {
-  margin-right: 4rem;
+  padding-right: 4rem;
 }
+
 .number-box {
   display: inline-flex;
   justify-content: center;
@@ -347,14 +396,27 @@ nav ul {
   }
   .how-container {
     margin-right: 0;
+    padding-right: 0;
   }
   .step {
-    padding-left: 3rem;
-    padding-right: 3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     padding-bottom: 1rem;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+  }
+  .text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .step-text {
+    max-width: 22rem;
+    margin: 0 auto;
+  }
+  .number-box {
+    margin-right: 0;
   }
   .download-buttons {
     text-align: center;
@@ -578,7 +640,7 @@ form {
 /* setting up label and input columns */
 .input-container {
   display: flex;
-  padding-bottom: 0.5rem;
+  margin-bottom: 0.6rem;
   justify-content: space-between;
   align-items: center;
 }
@@ -587,8 +649,6 @@ select,
 textarea,
 .confirm-news {
   width: 65%;
-  padding: 5px 2.5px;
-  border-radius: 10px;
 }
 textarea {
   resize: vertical;
@@ -598,13 +658,12 @@ select,
 textarea {
   border: 1px solid #c6c6c6;
 }
-input:focus,
-select:focus,
-textarea:focus {
-  outline: none;
-}
+
 input::placeholder {
   padding-left: 0.15rem;
+}
+.confirm-news {
+  padding: 0;
 }
 .confirm-news span {
   margin-left: 0.2rem;
@@ -612,7 +671,9 @@ input::placeholder {
 label:last-of-type {
   align-self: flex-start;
 }
-
+.newsletter-right {
+  margin-left: 0.2rem;
+}
 @media screen and (max-width: 664px) {
   form {
     max-width: 25rem;

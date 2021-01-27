@@ -12,12 +12,13 @@
       <div class="header-container section-center">
         <nav>
           <img src="./images/logo-white.png" alt="" class="logo-img" />
-          <ul class="nav-links">
+          <ul class="nav-links" id="nav-links">
             <li><a href="#" class="nav-link">food delivery</a></li>
             <li><a href="#" class="nav-link">how it works</a></li>
             <li><a href="#" class="nav-link">our cities</a></li>
             <li><a href="#" class="nav-link">sign up</a></li>
           </ul>
+          <span class="nav-icon-open" id="nav-btn"><ion-icon name="menu-outline"></ion-icon></span>
         </nav>
         <div class="banner-content">
           <h1 class="header-heading">
@@ -185,15 +186,16 @@
         <!-- how to  info -->
         <div class="how-it-works-info">
           <div class="step">
-            <p><div class="number-box"><span class="number-circle">1</span></div>Choose the subscription plan that best fits your needs and sign up today.</p>
+            <div class="text"><div class="number-box"><span class="number-circle">1</span></div><p class="step-text">Choose the subscription plan that best fits your needs and sign up today.</p></div>
           </div>
           <div class="step">
-            <p><div class="number-box"><span class="number-circle">2</span></div> Order your delicious meal using our
+            <div class="text"><div class="number-box"><span class="number-circle">2</span></div><p  class="step-text">Order your delicious meal using our
               mobile app or website. Or you can even call us!</p>
+            </div>
           </div>
           <div class="step">
-            <p><div class="number-box"><span class="number-circle">3</span></div> Enjoy
-            your meal after less than 20 minutes. See you the next time!</p>
+            <div class="text"><div class="number-box"><span class="number-circle">3</span></div><p class="step-text">Enjoy
+            your meal after less than 20 minutes. See you the next time!</p></div>
           </div>
           <div class="download-buttons">
             <a><img src="./images/download-app.svg" alt="iOS download"></a>
@@ -409,7 +411,7 @@
     </div>
     <div class="input-container">
       <label for="newsletter" class="label">Newsletter?</label> <div class="confirm-news">
-      <input type="checkbox" id="newsletter" name="confirm-checkbox"> <span>Yes, pleasae</span>
+      <input type="checkbox" id="newsletter" name="confirm-checkbox"> <label for="newsletter" class="newsletter-right">Yes, please</label>
       </div>
     </div>
     <div class="input-container">
@@ -445,6 +447,7 @@
   <!-- end of footer -->
 
   <!-- ionic icons -->
+    <script src="./app.js"></script>
     <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
   </body>
 </html>
