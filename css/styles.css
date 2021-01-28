@@ -189,10 +189,14 @@ header h1 {
 /*****************
 ***** Navigation*****
  *****************/
+
+nav {
+  width: 1100px;
+}
 nav img {
   color: white;
-  width: 8%;
-  height: 8%;
+  width: 105px;
+  height: 105px;
   transition: transform 0.8s linear;
 }
 nav img:hover {
@@ -200,6 +204,7 @@ nav img:hover {
 }
 nav {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   padding-top: 1rem;
@@ -224,35 +229,43 @@ nav ul {
 }
 @media screen and (max-width: 600px) {
   nav {
-    position: relative;
+    width: auto;
   }
-  .nav-links {
-    position: absolute;
-    top: 5rem;
-    left: 0;
-    height: 0;
-    display: block;
-    overflow: hidden;
-    transition: var(--transition);
-  }
-  .show-nav {
-    height: 130.667px;
-  }
-  .nav-links li {
-    margin-bottom: 1rem;
-  }
-  .nav-links a {
-    padding-bottom: 0.2rem;
+  nav > * {
+    flex: 0 0 50%;
   }
   .nav-icon-open {
     display: block;
-    font-size: 3rem;
+  }
+  .nav-links {
+    order: 1;
+    margin-top: 0.5rem;
+    height: 0;
+    overflow: hidden;
+    transition: var(--transition);
+  }
+  .nav-link {
+    padding-bottom: 2px;
+  }
+  nav li {
+    margin-bottom: 0.5rem;
+  }
+  .show-nav {
+    height: 98.67px;
+  }
+  .nav-icon-open {
+    font-size: 2.5rem;
   }
   .nav-icon-open ion-icon {
-    transition: 1s all;
+    transition: var(--transition);
+    color: var(--clr-primary-8);
+    padding-left: 180px;
   }
   .nav-icon-open ion-icon:hover {
-    color: var(--clr-primary-8);
+    color: var(--clr-primary-4);
+  }
+  nav ul {
+    display: block;
   }
 }
 
@@ -687,7 +700,7 @@ label:last-of-type {
 }
 .submit-btn {
   display: block;
-  margin: 0.4rem auto;
+  margin: 0.8rem auto;
   background: var(--clr-primary-5);
 }
 .submit-btn:hover {
