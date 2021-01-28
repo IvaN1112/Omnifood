@@ -190,9 +190,6 @@ header h1 {
 ***** Navigation*****
  *****************/
 
-nav {
-  width: 1100px;
-}
 nav img {
   color: white;
   width: 105px;
@@ -228,9 +225,6 @@ nav ul {
   display: none;
 }
 @media screen and (max-width: 600px) {
-  nav {
-    width: auto;
-  }
   nav > * {
     flex: 0 0 50%;
   }
@@ -254,12 +248,13 @@ nav ul {
     height: 98.67px;
   }
   .nav-icon-open {
-    font-size: 2.5rem;
+    display: flex;
+    font-size: 3rem;
+    justify-content: flex-end;
   }
   .nav-icon-open ion-icon {
     transition: var(--transition);
     color: var(--clr-primary-8);
-    padding-left: 180px;
   }
   .nav-icon-open ion-icon:hover {
     color: var(--clr-primary-4);
