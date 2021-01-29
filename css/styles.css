@@ -229,7 +229,7 @@ nav ul {
   color: white;
   margin-right: 1rem;
   text-transform: uppercase;
-  padding-bottom: 0.7rem;
+  padding-bottom: 0.3rem;
   border-bottom: 2 solid transparent;
   transition: border-bottom 0.2s;
 }
