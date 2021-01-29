@@ -248,7 +248,7 @@ nav ul {
   }
   .nav-links {
     order: 1;
-    margin-top: 0.5rem;
+    margin-top: 0.25rem;
     height: 0;
     overflow: hidden;
     transition: var(--transition);
@@ -276,6 +276,9 @@ nav ul {
   }
   nav ul {
     display: block;
+  }
+  .banner-content {
+    margin-top: 3.5rem;
   }
 }
 
